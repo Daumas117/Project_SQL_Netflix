@@ -171,7 +171,7 @@ order by type, release_rank
 	-- In this case, we will not create a sub evaluation, its not the main objective.
 -- The year with the highest series released is 2020.
 ```
-![Top 5 Series/Movies](images/Querie 1.2.png)
+![Top 5 Series/Movies](images/Querie1.2.png)
 
 2. Task 2. Identify the most frequently occurring rating for each type of content.
 ```sql
@@ -183,7 +183,7 @@ select
 from netflix_titles
 group by type, rating
 ```
-![Most Frequent Rating](images/Querie 2.1.png)
+![Most Frequent Rating](images/Querie2.1.png)
 
 Now using CTEs.
 ```SQL
@@ -209,7 +209,7 @@ from Rank_rating_movie_serie
 where Ranking <= 5
 order by type, Ranking
 ```
-![Most Frequent Rating](images/Querie 2.2.png)
+![Most Frequent Rating](images/Querie2.2.png)
 
 3. Retrieve all movies released in a specific year.
 ```sql
@@ -218,7 +218,7 @@ from netflix_titles
 where release_year = '2021' -- Search for an specific year.
 order by date_added asc -- Order it by date added.
 ```
-![Retrieve all movies released in a specific year](images/Querie 3.0.png)
+![Retrieve all movies released in a specific year](images/Querie3.0.png)
 
 4. Identify the top 5 countries with the highest number of content items.
 ```sql
@@ -234,7 +234,7 @@ order by 2 desc
 -- After that we will rank the appearance of each country.
 -- We can do a top or leave it as a list.
 ```
-![Identify the top 5 countries with the highest number of content items](images/Querie 4.1.png)
+![Identify the top 5 countries with the highest number of content items](images/Querie4.1.png)
 
 ```sql
 select 
@@ -249,7 +249,7 @@ where
 group by trim(value)
 order by rank
 ```
-![Identify the top 5 countries with the highest number of content items](images/Querie 4.2.png)
+![Identify the top 5 countries with the highest number of content items](images/Querie4.2.png)
 
 5. Find the movie with the longest duration.
 ```sql
@@ -264,7 +264,7 @@ ORDER BY Duration_new DESC;
 -- The duration its stored as nvarchar, we need to cast it as INT so we can order it.
 -- CharIndex finds the position just before ' MIN' so we can use LEFT to remove it.
 ```
-![Find the movie with the longest duration](images/Querie 5.0.png)
+![Find the movie with the longest duration](images/Querie5.0.png)
 
 6. Retrieve content added to Netflix in the last 5 years.
 7. List all content directed by 'Alfonso Cuaron'.
@@ -277,7 +277,7 @@ where director like 'Alfonso Cuar%'
 -- We need to use the function Like to search the closest as we can to the name.
 
 ```
-![List all content directed by 'Alfonso Cuaron'](images/Querie 7.0.png)
+![List all content directed by 'Alfonso Cuaron'](images/Querie7.0.png)
 
 8. Identify TV shows with more than 5 seasons.
 ```sql
@@ -298,7 +298,7 @@ from Seasons_Counter
 where Duration_new > 5
 order by Duration_new desc
 ```
-![Identify TV shows with more than 5 seasons](images/Querie 8.2.png)
+![Identify TV shows with more than 5 seasons](images/Querie8.2.png)
 
 9. Calculate and rank years by the average number of content releases by Mexico.
 ``` sql
@@ -338,7 +338,7 @@ select
 from rank_stats
 order by Release_Count desc
 ```
-![Calculate and rank years by the average number of content releases by Mexico.](images/Querie 9.0.png)
+![Calculate and rank years by the average number of content releases by Mexico.](images/Querie9.0.png)
 
 10. Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise.
 ```sql
@@ -355,7 +355,7 @@ FROM (
 ) AS categorized_content
 GROUP BY category;
 ```
-![Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise](images/Querie 10.0.png)
+![Categorize content as 'Bad' if it contains 'kill' or 'violence' and 'Good' otherwise](images/Querie10.0.png)
 
 
 
