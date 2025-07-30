@@ -361,22 +361,19 @@ GROUP BY category;
 
 ## 🎯 Key Findings
 
-- 💡 **[Insight 1]**: [Brief summary]
-- 📈 **[Insight 2]**: [Brief summary]
-- 🧩 **[Insight 3]**: [Brief summary]
-
-These findings suggest that **[recommendation/actionable result]**.
+- 💡 **[Insight 1]**: The number of shows vs Movies has been increasing while the movie industry is decreasing from previous numbers.
+- 📈 **[Insight 2]**: The closest country to release movies/Tv Shows is India, with less than 2500 releases compared to USA. If you combine the top 5 (excluding USA), you dont even reach the number of releases of USA.
+- 🧩 **[Insight 3]**: The longest movie is Black Mirrow with 312 minutes of movie. And the shortest movie is 3 mins long. 
 
 ---
-
 
 ## 🧠 Learnings & Challenges
 
 **Learned:**
-- How to handle imbalanced datasets
-- Improved feature engineering for time-series
+- How to handle the use CASE to classify information.
+- Improved the use of CTEs to prevent long queries.
 
 **Challenges:**
-- Cleaning inconsistent date formats
-- Dealing with missing data in key variables
+- Using the function cast to prevent ordering information incorrectly.
+- Dealing with different formats to evaluate searches.
 
